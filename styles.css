@@ -1,0 +1,410 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+}
+
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background-color: #2a7fca;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+z-index: 50;
+}
+
+.nav-container {
+max-width: 1280px;
+margin: 0 auto;
+padding: 0 1rem;
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 4rem;
+}
+
+.logo {
+font-size: 1.25rem;
+font-weight: bold;
+color: #1a1a1a;
+}
+
+.nav-links {
+display: flex;
+gap: 2rem;
+}
+
+.nav-button {
+    font-family: monospace;
+    position: relative; /* Necessário para posicionar o ::after */
+    background: none;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+}
+
+.nav-button:hover {
+color: #2E4372;
+}
+
+.nav-button::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #2E4372;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-button:hover::after{
+    width: 100%;
+}
+
+.section {
+min-height: 100vh;
+padding: 5rem 1rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.content {
+max-width: 1280px;
+margin: 0 auto;
+text-align: center;
+}
+
+#inicio {
+background-color: white;
+}
+
+#sobre {
+background-color: #f9fafb;
+}
+
+#sobre h2 {
+ color: #1d4ed8;
+}
+
+#detalhes {
+background-color: white;
+}
+
+#contato {
+background-color: #1f2937;
+color: white;
+}
+
+.detalhes-grid {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+margin-top: 2rem;
+}
+
+.detalhes-card {
+padding: 1.5rem;
+background-color: #f9fafb;
+border-radius: 0.5rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detalhes-content {
+display: flex;
+align-items: center;
+gap: 2rem;
+}
+
+.detalhes-text {
+flex: 1;
+text-align: left;
+}
+
+.detalhes-image {
+flex: 1;
+max-width: 400px;
+}
+
+.detalhes-image img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+border-radius: 0.5rem;
+max-width: none;
+}
+
+@media (max-width: 768px) {
+.detalhes-content {
+    flex-direction: column;
+}
+
+.detalhes-image {
+    width: 100%;
+    max-width: none;
+    
+}
+
+.detalhes-text {
+    text-align: center;
+}
+}
+
+#requisitos{
+    background-color: #2E4372;    
+}
+
+.requisitos-grid {
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+gap: 2rem;
+margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+.requisitos-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+
+.requisitos-card {
+padding: 1.5rem;
+background-color: #f9fafb;
+border-radius: 0.5rem;
+border: 2px solid #03101c;
+
+}
+
+.requisitos-card:hover{
+    color: #1d4ed8;
+    transform: scale(1.05);   /* aumenta um pouco o tamanho */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#requisitos h2 {
+    margin-bottom: 10%;
+    font-size: 42px;
+}
+
+
+.dicas-grid {
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+gap: 2rem;
+margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+.dicas-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+.dicas-card {
+padding: 1.5rem;
+background-color: #bddeff;
+border-radius: 0.5rem;
+border: 2px solid #fdfdfd;
+
+}
+
+.dicas-image {
+    width: 100%;
+    max-width: none;
+    
+}
+
+.dicas-image {
+flex: 1;
+max-width: auto;
+}
+
+.dicas-image img {
+width: 100%;
+height: 350px;
+object-fit: cover;
+border-radius: 0.5rem;
+max-width: none;
+}
+
+.texto-dica{
+    color: #000000;
+}
+
+h1 {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+
+h2 {
+font-family: 'Ethnocentric';
+font-size: 2rem;
+margin-bottom: 2rem;
+color: white;
+}
+
+h3 {
+font-family:'JetBrains Mono';
+font-size: 1.25rem;
+margin-bottom: 1rem;
+}
+
+p {
+color: #666;
+line-height: 1.5;
+font-family: 'JetBrains Mono';
+font-size: 1rem;
+}
+
+.section .content p {
+    font-family: 'JetBrains Mono';
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 8px;
+    color: #90cdf4;
+    }
+
+
+.inicio-background {
+background-image: url(imagens/informatica.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
+}
+
+.inicio-background::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Escurece a imagem para melhorar a legibilidade do texto */
+}
+
+.inicio-background .content {
+position: relative;
+z-index: 1;
+color: white;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.inicio-background .content1 {
+position: relative;
+z-index: 1;
+color: white;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.texto {
+font-family: 'Ethnocentric', sans-serif;
+font-size: c30px;
+color: white;
+line-height: 1.2em;
+text-align: center;
+max-height: calc(1.2em * 2);
+white-space: nowrap;
+overflow: hidden;
+}
+
+#cursor {
+display: inline-block;
+animation: escreverApagar 15s steps(32) infinite;
+color: white;
+visibility: hidden; 
+}
+
+@keyframes escreverApagar {
+0%, 100% { opacity: 1; }
+50% { opacity: 0; }
+}
+
+#linha1, #linha2 {
+display: inline-block;
+white-space: nowrap;
+}
+
+.content1 {
+max-width: 100%;
+padding: 0 1rem;
+box-sizing: border-box;
+text-align: center;
+}
+
+
+
+
+@font-face {
+font-family: 'Ethnocentric';
+src: url('fonts/ethnocentric/Ethnocentric\ Rg\ It.otf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'JetBrains Mono';
+src: url('fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+font-weight: normal;
+font-style: italic;
+}
+
+#ods{
+    background-color: #2E4372;
+}
+
+#ods h2 {
+    font-size: 45px;
+    margin-bottom: 60px;
+}
+
+#ods p {
+    color: white;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.ods-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+footer {
+    background-color: #2a7fca;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  footer p {
+    color: white;
+  }
+
+.footer-credit{
+    margin-top: 20px;
+}
+
+.inicio-p{
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 15px;
+}
+  
+  
